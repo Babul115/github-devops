@@ -1,5 +1,6 @@
-git init
-git status
-git add filename
-git commit -m ""
-rm filename
+git init  --> initializing ke liye hota hai
+git status  --> stage check karne ke liye hota hai
+git add filename --> staged me add karne ke liye
+git commit -m "" --> file tracked ke liye hota hai
+rm filename --> repo delete karne ke liye
+git restore  --> wapis restore karne ke liye 
