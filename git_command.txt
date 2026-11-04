@@ -13,3 +13,4 @@ git pull --> github to local changes
 git branch --> it shows branches
 git branch branchname --> create branch
 git switch --> it just internally copy the master branch
+git log --oneline --> changes commit logs and head is latest commit
