@@ -10,3 +10,6 @@ git clone --> github to local clone
 
 this is new changes in command.txt
 git pull --> github to local changes 
+git branch --> it shows branches
+git branch branchname --> create branch
+git switch --> it just internally copy the master branch
