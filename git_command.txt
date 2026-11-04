@@ -7,3 +7,5 @@ git restore  --> wapis restore karne ke liye
 git push --> use for local to github
 git push origin master --> master repo push ke liye
 git clone --> github to local 
+
+this is new changes in command.txt
