@@ -4,8 +4,9 @@ git add filename --> staged me add karne ke liye
 git commit -m "" --> file tracked ke liye hota hai
 rm filename --> repo delete karne ke liye
 git restore  --> wapis restore karne ke liye 
-git push --> use for local to github
-git push origin master --> master repo push ke liye
-git clone --> github to local 
+git push --> use for local to github changes
+git push origin master --> local changes github me push karne ke liye
+git clone --> github to local clone
 
 this is new changes in command.txt
+git pull --> github to local changes 
