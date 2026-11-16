@@ -1,16 +1,147 @@
-git init  --> initializing ke liye hota hai
-git status  --> stage check karne ke liye hota hai
-git add filename --> staged me add karne ke liye
-git commit -m "" --> file tracked ke liye hota hai
-rm filename --> repo delete karne ke liye
-git restore  --> wapis restore karne ke liye 
-git push --> use for local to github changes
-git push origin master --> local changes github me push karne ke liye
-git clone --> github to local clone
+# Git & GitHub Commands
 
-this is new changes in command.txt
-git pull --> github to local changes 
-git branch --> it shows branches
-git branch branchname --> create branch
-git switch --> it just internally copy the master branch
-git log --oneline --> changes commit logs and head is latest commit
+## Basic Git Commands
+
+`git init` → Initializes a new Git repository in the current project directory.
+
+`git status` → Shows the current status of files, including modified, untracked, and staged files.
+
+`git add filename` → Adds a specific file to the staging area to prepare it for committing.
+
+`git add .` → Adds all new and modified files in the current directory to the staging area.
+
+`git commit -m "message"` → Saves the staged changes as a new commit in the local Git repository.
+
+`rm filename` → Deletes a file from the working directory. Git detects this deletion as a change.
+
+`git rm filename` → Deletes a file from the working directory and stages its deletion for the next commit.
+
+`git restore filename` → Discards unstaged changes in a file and restores it to the last committed version.
+
+`git restore --staged filename` → Removes a file from the staging area without deleting its changes from the working directory.
+
+`git diff` → Shows the differences between modified files and their last committed versions.
+
+`git diff --staged` → Shows the differences between staged changes and the last commit.
+
+## Git Configuration Commands
+
+`git config --global user.name "Your Name"` → Sets your username globally for Git commits.
+
+`git config --global user.email "your@email.com"` → Sets your email address globally for Git commits.
+
+`git config --list` → Displays all configured Git settings, such as username and email.
+
+## GitHub & Remote Repository Commands
+
+`git remote -v` → Displays the URLs of remote repositories connected to the local Git repository.
+
+`git remote add origin URL` → Connects the local Git repository to a remote repository, usually hosted on GitHub.
+
+`git push` → Uploads local commits to the connected remote repository.
+
+`git push origin master` → Pushes local master branch commits to the remote master branch on GitHub.
+
+`git push -u origin main` → Pushes the local main branch to GitHub and sets the upstream branch for future pushes.
+
+`git pull` → Fetches the latest changes from the remote repository and integrates them into the current local branch.
+
+`git fetch` → Downloads the latest commits and branch updates from the remote repository without merging them into the current branch.
+
+`git clone URL` → Creates a local copy of an existing remote Git repository.
+
+## Git Branch Commands
+
+`git branch` → Displays all local branches in the repository and highlights the current branch.
+
+`git branch branchname` → Creates a new branch without switching to it.
+
+`git switch branchname` → Switches from the current branch to an existing branch.
+
+`git switch -c branchname` → Creates a new branch and immediately switches to it.
+
+`git branch -d branchname` → Deletes a local branch that has already been merged.
+
+`git merge branchname` → Combines the changes from the specified branch into the current branch.
+
+## Git History & Previous Version Commands
+
+`git log` → Displays the complete commit history of the current branch.
+
+`git log --oneline` → Displays commit history in a short, one-line format with commit IDs and messages.
+
+`git show COMMIT_ID` → Displays detailed information about a specific commit, including its changes.
+
+`git reset --soft COMMIT_ID` → Moves the current branch to an earlier commit while keeping changes staged.
+
+`git reset --mixed COMMIT_ID` → Moves the current branch to an earlier commit while keeping changes in the working directory as unstaged changes.
+
+`git reset --hard COMMIT_ID` → Moves the current branch to an earlier commit and resets the staging area and working directory. Uncommitted changes can be permanently lost.
+
+`git revert HEAD` → Creates a new commit that reverses the changes introduced by the latest commit.
+
+`git checkout COMMIT_ID` → Switches to a specific commit for temporarily viewing or testing an older version of the project.
+
+`git switch main` → Switches the current working branch to the main branch.
+
+`git reflog` → Shows the history of HEAD and branch reference movements, helping recover accidentally lost commits or branch positions.
+
+## Additional Useful Git Commands
+
+`git stash` → Temporarily saves uncommitted changes so you can work on something else without committing them.
+
+`git stash pop` → Restores the most recently stashed changes and removes them from the stash list if successfully applied.
+
+`git stash list` → Displays all temporarily saved stashes.
+
+`git stash apply` → Restores stashed changes without removing them from the stash list.
+
+`git mv oldname newname` → Renames or moves a file and stages the change in Git.
+
+`git tag` → Displays existing tags or creates a tag to mark an important point in project history.
+
+`git tag v1.0` → Creates a tag named v1.0 to mark a specific project version.
+
+`git push origin v1.0` → Pushes the specified tag to the remote repository.
+
+`git cherry-pick COMMIT_ID` → Applies the changes from a specific commit to the current branch without merging the entire branch.
+
+`git branch -a` → Displays all local and remote-tracking branches.
+
+`git branch -m newname` → Renames the current branch.
+
+`git rm --cached filename` → Removes a file from Git tracking while keeping the file in the local working directory.
+
+## Git Ignore
+
+`.gitignore` → A special file that specifies which files and folders Git should ignore and not track.
+
+Example:
+.venv/
+__pycache__/
+.env
+*.log
+
+## Important Git Concepts
+
+Working Directory → The folder where you create, edit, and modify project files.
+
+Staging Area → An area where you prepare selected changes before creating a commit.
+
+Local Repository → Stores project history, commits, and Git metadata on your computer.
+
+Remote Repository → A repository hosted on a remote platform such as GitHub.
+
+Commit → A saved snapshot of staged changes in the Git repository.
+
+Branch → An independent line of development that allows developers to work on different features separately.
+
+HEAD → A pointer that represents the currently checked-out commit.
+
+Origin → The default name commonly given to a remote repository.
+
+Merge Conflict → Occurs when Git cannot automatically combine changes from different branches and requires manual resolution.
+
+Pull Request (PR) → A GitHub feature used to propose changes from one branch into another branch for review and merging.
+
+`.gitignore` → Specifies files and folders that Git should ignore during tracking.
